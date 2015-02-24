@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.foundu.yash.foundu.LocationSharePrompt" >
+    <item android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        android:icon="@drawable/ic_menu_refresh1"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        />
+    <item android:id="@+id/action_notifications"
+        android:title="@string/action_notifications"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_menu_notification"/>
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_menu_settings"/>
+    <item android:id="@+id/action_help"
+        android:title="@string/action_help"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_menu_help"/>
+</menu>

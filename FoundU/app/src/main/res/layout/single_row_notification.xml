@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cast your vote today ! Nearest Lok Sabha polling booth is within 2 km."
+        android:id="@+id/notification_text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="20 Nov 2014 10:59 PM"
+        android:id="@+id/notification_timestamp"
+        android:textColor="@color/DeepSkyBlue"
+        android:typeface="serif"
+        android:textStyle="italic"
+        android:password="false"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

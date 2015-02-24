@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+tools:context="com.alterloop.foundu.Help"
+android:background="@drawable/foundu_bkg"
+android:textColor="@color/black"
+android:typeface="monospace"
+android:orientation="vertical">
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Found.U"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/founduversion"
+            android:gravity="center_horizontal"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:padding="10dp"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/companyinfo"
+            android:gravity="center_horizontal"
+            />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/foundufaq"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:gravity="center_horizontal"
+                android:text="http://alterloop.com"
+                android:textSize="20dp"
+                android:textColorLink="@color/black"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

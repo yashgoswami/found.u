@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/foundubkg"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.alterloop.foundu.FriendInformation"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:typeface="serif"
+                android:background="@color/DeepSkyBlue"
+                android:padding="1dp">
+                <ImageView
+                    android:id="@+id/imageViewFriend"
+                    android:src="@drawable/defaultimg"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="1dp"
+                    android:background="@color/DeepSkyBlue"
+                    android:scaleType="fitXY"/>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Yash Goswami"
+                    android:id="@+id/textViewFriendName"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignTop="@+id/imageViewFriend"
+                    android:layout_toRightOf="@+id/imageViewFriend"
+                    android:layout_toEndOf="@+id/imageViewFriend"/>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="+919654490876"
+                    android:id="@+id/textViewFriendPhonenumber"
+                    android:typeface="monospace"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/textViewFriendName"
+                    android:layout_toRightOf="@+id/imageViewFriend"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="20 Nov 2014 10:18 PM"
+                    android:id="@+id/textViewFriendLastSeenOn"
+                    android:typeface="monospace"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/textViewFriendPhonenumber"
+                    android:layout_toRightOf="@+id/imageViewFriend"
+                    android:layout_marginTop="25dp"/>
+
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Within 200 km"
+                android:textColor="@color/DeepSkyBlue"
+                android:id="@+id/textViewFriendRange"
+                android:typeface="monospace"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="At Home!"
+                android:id="@+id/textViewFriendStatus"
+                android:textColor="@color/black"
+                android:typeface="monospace"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="151 Guru Nanak Pura, Raja Park, Jaipur"
+                android:id="@+id/textViewFriendAddress"
+                android:textColor="@color/black"
+                android:typeface="monospace"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View on Map"
+                    android:typeface="monospace"
+                    android:background="@color/DeepSkyBlue"
+                    android:id="@+id/buttonViewOnMap"
+                    android:textColor="@color/white"
+                    android:onClick="viewFriendOnMap"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SEND A NOTE"
+                    android:typeface="monospace"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/DeepSkyBlue"
+                    android:id="@+id/buttonMeetingNote"
+                    android:textColor="@color/white"
+                    android:onClick="callSelectedFriend"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send a Message"
+                    android:typeface="monospace"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/DeepSkyBlue"
+                    android:id="@+id/buttonMessage"
+                    android:textColor="@color/white"
+                    android:onClick="messageSelectedFriend"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Call"
+                    android:typeface="monospace"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/DeepSkyBlue"
+                    android:id="@+id/buttonCall"
+                    android:textColor="@color/white"
+                    android:onClick="callSelectedFriend"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

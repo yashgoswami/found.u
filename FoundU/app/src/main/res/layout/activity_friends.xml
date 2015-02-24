@@ -1,0 +1,164 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/foundubkg"
+    >
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="12dp"
+        android:padding="12dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollingCache="false"
+        android:clipToPadding="false"
+        android:fadeScrollbars="true"
+        android:scrollbarStyle="outsideInset" />
+
+    <View
+        android:id="@+id/touch_interceptor_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/foundu_bkg"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/imageViewFriend"
+            android:src="@drawable/defaultimg"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/DeepSkyBlue" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:text="Mr U"
+            android:id="@+id/textViewFriendName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <TextView
+            android:text="5 km"
+            android:id="@+id/textViewFriendRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:background="@color/DeepSkyBlue" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/details_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="4sp" />
+        </ScrollView>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal"  android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@color/DeepSkyBlue">
+
+            <!-- Buttons added for initiating meeting with friends -> starts -->
+
+            <ImageButton android:id="@+id/Call"
+                android:src="@drawable/call"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="callSelectedFriend"
+                android:background="@color/DeepSkyBlue"
+               />
+
+            <ImageButton android:id="@+id/Chat"
+                android:src="@drawable/chat"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:background="@color/DeepSkyBlue"
+                />
+
+            <ImageButton android:id="@+id/MeetFriend"
+                android:src="@drawable/meet"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:background="@color/DeepSkyBlue"/>
+
+            <ImageButton android:id="@+id/Note"
+                android:src="@drawable/note"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:clickable="false"
+                android:background="@color/DeepSkyBlue"/>
+            <!-- Buttons added for initiating meeting with friends -> ends -->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.alterloop.foldablelayout.UnfoldableView
+        android:id="@+id/unfoldable_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

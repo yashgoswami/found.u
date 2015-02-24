@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/foundubkg"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.alterloop.foundu.RegisterNewUser"
+    android:orientation="vertical"    >
+    <!-- Dummy item to prevent edit text from receiving focus -->
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_marginTop="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registerNumberPrompt"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/oneTimeSMSPrompt"
+                android:layout_marginTop="20dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerCountryCodes"
+                    android:prompt="@string/country_prompt"
+                    android:entries="@array/CountryCodes"
+                    android:textColor="@color/white"
+                    android:typeface="monospace"
+                    android:spinnerMode="dialog"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:typeface="monospace"
+                    android:hint="@string/enterPhonePrompt"
+                    android:id="@+id/editTextPhonenumber"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Register"
+                android:typeface="monospace"
+                android:background="@color/DeepSkyBlue"
+                android:id="@+id/buttonRegister"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:onClick="startRegisterProcess"/>
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:inputType="number"
+                android:typeface="monospace"
+                android:hint="@string/activationPrompt"
+                android:id="@+id/editTextActivationCode"
+                android:layout_marginTop="40dp"
+                android:textColor="#000000" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Activate"
+                android:typeface="monospace"
+                android:layout_marginTop="10dp"
+                android:background="@color/DeepSkyBlue"
+                android:id="@+id/buttonActivate"
+                android:textColor="@color/white"
+                android:onClick="activatePhonenumber"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
